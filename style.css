@@ -1,0 +1,293 @@
+@font-face {
+    font-family: "Quarion";
+    src: url(fonts/Quarion-Light.woff2),
+        url(fonts/Quarion-Light.woff),
+        url(fonts/Quarion-Light.ttf);
+}
+
+
+/* Основные стили */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Quarion', sans-serif;
+}
+
+body {
+    background-color: #ffffff;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #a15e4b;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eee;
+}
+
+header h1 {
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+header p {
+    color: #ffffff;
+    font-size: 18px;
+}
+
+section {
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eee;
+}
+
+h2 {
+    margin-bottom: 15px;
+    color: #ffffff;
+    font-size: 20px;
+    letter-spacing: 1.5px;
+}
+
+/* Стили для шкалы NPS */
+.nps-section {
+    text-align: center;
+}
+
+.nps-scale {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.nps-numbers {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+
+.nps-numbers span {
+    width: 30px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.nps-inputs {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.nps-inputs input {
+    margin: 0;
+    cursor: pointer;
+    transform: scale(1.5);
+}
+
+.nps-labels {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 10px;
+    font-size: 14px;
+    color: #ffffff;
+}
+
+/* Стили для рейтинга звезд */
+.rating-section {
+    margin-top: 40px;
+}
+
+.rating-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    padding: 10px;
+    background-color: #ffffff;
+    border-radius: 5px;
+}
+
+.rating-item label {
+    font-weight: bold;
+    flex: 1;
+}
+
+.stars {
+    display: flex;
+    gap: 15px;
+}
+
+.stars input {
+    display: none;
+}
+
+.stars label {
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    background-color: #ddd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    transition: background-color 0.3s;
+}
+
+.stars input:checked + label {
+    background-color: #ffcc00;
+    color: #fff;
+}
+
+.stars label:hover {
+    background-color: #ffdd55;
+}
+
+/* Стили для текстовых полей */
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    resize: vertical;
+    font-size: 16px;
+}
+
+textarea:focus {
+    outline: none;
+    border-color: #4a90e2;
+    box-shadow: 0 0 5px rgba(74, 144, 226, 0.3);
+}
+
+.question-item {
+    margin-bottom: 20px;
+}
+
+.question-item label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: normal;
+    color: #ffffff;
+}
+
+/* Стили для контактной секции */
+.contact-section {
+    margin-top: 30px;
+}
+
+.contact-checkbox {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    color: #ffffff;
+}
+
+.contact-checkbox input {
+    margin-right: 10px;
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+.phone-input {
+    display: none;
+    margin-top: 15px;
+}
+
+.phone-input.active {
+    display: block;
+}
+
+.phone-input label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: normal;
+    color: #ffffff;
+}
+
+.phone-input input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* Стили для кнопки отправки */
+.submit-btn {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    background-color: #4a90e2;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 30px;
+}
+
+.submit-btn:hover {
+    background-color: #ffffff;
+}
+
+/* Стили для сообщения благодарности */
+#thankYouMessage {
+    text-align: center;
+    padding: 40px 20px;
+    color: #ffffff;
+}
+
+#thankYouMessage h2 {
+    color: #ffffff;
+    margin-bottom: 15px;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Адаптивность для мобильных устройств */
+@media (max-width: 600px) {
+    .container {
+        padding: 15px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    
+    .rating-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .stars {
+        margin-top: 10px;
+        width: 100%;   
+        justify-content: space-between;
+    }
+    
+    .nps-numbers span, .nps-inputs input {
+        width: 20px;
+        height: 20px;
+        aspect-ratio: 1;
+    }
+    
+    .nps-labels {
+        font-size: 12px;
+    }
+}
